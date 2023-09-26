@@ -1,0 +1,97 @@
+body {
+    background-image: url(../library/clouds.png);
+}
+
+.main-container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#query-form {
+    display:flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.headline {
+    background-color: lavender;
+    border: 2px solid purple;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.entry > input {
+    background-color: lavender;
+        border: 2px solid purple;
+        width: 12rem;
+        height: 2rem;
+}
+
+.button > input {
+    background-color: lavender;
+        border: 2px solid purple;
+        width: 8rem;
+        height: 2rem;
+        margin-top: 1rem;
+}
+
+.results-container {
+    opacity: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    gap: 2rem 3rem;
+}
+
+.box {
+    background-color: lavender;
+        border: 2px solid purple;
+        margin: 1rem;
+        padding: 1rem;
+}
+
+#alerts {
+    order: 1;
+}
+    
+#current {
+    order: 3;
+}
+
+#unnecessary-comment {
+    order: 2;
+}
+
+#tomorrow {
+    order: 5;
+}
+
+#overmorrow {
+    order: 6;
+}
+
+#following-morrow {
+    order: 7;
+}
+
+#hottest {
+    order: 8;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        display:flex;
+    }
+    #unnecessary-comment {
+        order: 4;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Weathery</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="query-form" id="query-form">
+            <div class="headline">
+                <h1>Local Weather Report</h1>
+            </div>
+            <form name="form" class="form"></form>
+                <div class="entry" onKeyPress="return checkSubmit(event)">
+                    <label for="cityName"></label>
+                    <input type="text" placeholder="Enter City Name" id="cityName" name="cityName"></br>
+                </div>
+                <div class="button">
+                    <input type="button" value="Search" class="search" onclick="getWeather()">
+                </div>
+            </form>
+        </div>
+        <div class="results-container" id="results-container">
+            <div class="container">
+                <!--this is where the display goes-->
+                <div class="box" id="alerts"></div>
+                <div class="box" id="unnecessary-comment"></div>
+                <div class="box" id="current"></div>
+                <div class="box" id="tomorrow"></div>
+                <div class="box" id="overmorrow"></div>
+                <div class="box" id="following-morrow"></div>
+                <div class="box" id="hottest"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>
+
+<!-- style="display:flex; flex-wrap: wrap; justify-content: space-around;" -->
