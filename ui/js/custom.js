@@ -2,6 +2,15 @@
 
 // current weather: 'http://api.weatherapi.com/v1/current.json?key=cfcaea0b0c884c728f953206232009&q=${cityName}&days=3&alerts=yes'
 
+const getAllCities = async () => {
+  console.log("test one");
+  let cities = await fetch("http://localhost:3000/get-cities");
+  let citiesParsed = await cities.json();
+  console.log(citiesParsed);
+  return citiesParsed;
+};
+getAllCities(); // This function is called when app first loads, you will call this function in your JavaScript file. You might call it inside of another function.
+
 function checkSubmit(e) {
   if (e && e.keyCode == 13) {
     getWeather();
